@@ -1,0 +1,38 @@
+:root {
+  --addBtn-color: #292929;
+  --textBox-color: #e0e0e0;
+  --white-color: #f1efef;
+}
+.title {
+  text-align: center;
+}
+
+.tools {
+  display: flex;
+  justify-content: center;
+}
+
+#newThing {
+  display: flex;
+  margin-right: 5px;
+  border: 0;
+  background-color: var(--textBox-color);
+}
+
+#addBtn {
+  display: flex;
+  border-color: var(--addBtn-color);
+  background-color: var(--addBtn-color);
+  color: var(--white-color);
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
