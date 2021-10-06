@@ -2,6 +2,7 @@
   --addBtn-color: #292929;
   --textBox-color: #e0e0e0;
   --white-color: #f1efef;
+  --done-color: #9b9898;
 }
 .title {
   text-align: center;
@@ -33,6 +34,20 @@
 
 ul {
   list-style: none;
-  text-align: left;
+  text-align: center;
   padding: 0;
+}
+
+#tdl li {
+  display: flex;
+  font-size: larger;
+  margin: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 40%;
 }
