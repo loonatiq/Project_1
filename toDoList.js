@@ -11,7 +11,7 @@ document.querySelector('#newThing').addEventListener('keypress', function(e){
     addNew();
   }
 });
-
+document.querySelector('#dltBtn').addEventListener('click', deleteBtn);
 //Functions
 // 1. 내용 있을 시 리스트 추가 가능
 function addNew(){
@@ -26,18 +26,18 @@ function addNew(){
     thing.textContent = inputValue;
     item.append(thing);
     tBox.value = '';
-    // 1-3. 삭제 아이콘
-    const icon = document.createElement('i');
-    icon.setAttribute('class', 'fas fa-minus-square');
-    item.append(icon);
+    // // 1-3. 삭제 아이콘
+    // const icon = document.createElement('i');
+    // icon.setAttribute('class', 'fas fa-minus-square');
+    // item.append(icon);
     // 1-4. 리스트 완료 표시 요소 선택
       for(let i = 0; i < things.length; i++){
         things[i].children[0].addEventListener('click', done);
       }
     // 1-5. 리스트 삭제 요소 선택
-      for(let i = 0; i < things.length; i++){
-        things[i].children[1].addEventListener('click', deleteList);
-      }
+      // for(let i = 0; i < things.length; i++){
+      //   things[i].children[1].addEventListener('click', deleteList);
+      // }
   }
 }
 
@@ -49,4 +49,14 @@ function done(){
 // 3. 리스트 삭제
 function deleteList(){
   this.parentElement.remove();
+}
+
+function deleteBtn(){
+  
+    for(let i = 0; i < things.length; i++){
+      const icon = document.createElement('i');
+    icon.setAttribute('class', 'fas fa-minus-square');
+      things[i].append(icon);
+      things[i].children[1].addEventListener('click', deleteList);
+    }
 }

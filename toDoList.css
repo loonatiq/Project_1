@@ -1,9 +1,16 @@
 :root {
-  --addBtn-color: #292929;
-  --textBox-color: #e0e0e0;
+  --Btn-color: #727070;
+  --textBox-color: #b1b1b1;
   --white-color: #f1efef;
   --done-color: #9b9898;
+  --black-color: #0a0a0a;
 }
+
+body {
+  background: url(/img/pexels-jana-kukebal-6586260.jpg) no-repeat fixed 50% 50% /
+    100% auto;
+}
+
 .title {
   text-align: center;
 }
@@ -15,16 +22,17 @@
 
 #newThing {
   display: flex;
-  margin-right: 5px;
   border: 0;
   background-color: var(--textBox-color);
+  margin: 0px 2px;
 }
 
-#addBtn {
+button {
   display: flex;
-  border-color: var(--addBtn-color);
-  background-color: var(--addBtn-color);
+  border-color: var(--Btn-color);
+  background-color: var(--Btn-color);
   color: var(--white-color);
+  margin: 0px 2px;
 }
 
 .list {
