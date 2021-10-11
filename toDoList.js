@@ -26,15 +26,18 @@ function addNew(){
     thing.textContent = inputValue;
     item.append(thing);
     tBox.value = '';
-    // // 1-3. 삭제 아이콘
-    // const icon = document.createElement('i');
-    // icon.setAttribute('class', 'fas fa-minus-square');
-    // item.append(icon);
+    // 1-3. 삭제 아이콘
+    const icon = document.createElement('i');
+    ////////////////시행착오////////////////
+    ////// icon.setAttribute('class', 'fas fa-minus-square');
+    icon.setAttribute('class', 'fas');
+    item.append(icon);
     // 1-4. 리스트 완료 표시 요소 선택
       for(let i = 0; i < things.length; i++){
         things[i].children[0].addEventListener('click', done);
       }
-    // 1-5. 리스트 삭제 요소 선택
+      ////////////////시행착오////////////////
+      // 1-5. 리스트 삭제 요소 선택
       // for(let i = 0; i < things.length; i++){
       //   things[i].children[1].addEventListener('click', deleteList);
       // }
@@ -46,17 +49,30 @@ function done(){
   this.classList.toggle('done');
 }
 
-// 3. 리스트 삭제
+// 3-1. 삭제 버튼 토글
+function deleteBtn(){
+  for(let i = 0; i < things.length; i++){
+    things[i].children[1].classList.toggle('fa-minus-square');
+    things[i].children[1].addEventListener('click', deleteList);
+  }
+}
+
+
+// 3-2. 리스트 삭제
 function deleteList(){
   this.parentElement.remove();
 }
 
-function deleteBtn(){
-  
-    for(let i = 0; i < things.length; i++){
-      const icon = document.createElement('i');
-    icon.setAttribute('class', 'fas fa-minus-square');
-      things[i].append(icon);
-      things[i].children[1].addEventListener('click', deleteList);
-    }
-}
+////////////////시행착오////////////////
+// function deleteBtn(){
+//     for(let i = 0; i < things.length; i++){
+//       const icon = document.createElement('i');
+//       icon.setAttribute('class', 'fas fa-minus-square');
+//       things[i].append(icon);
+//       things[i].children[1].addEventListener('click', deleteList);
+//     }
+// }
+// function deleteBtn(){
+//   let minusIcn = document.querySelector('.fa-minus-square');
+//   minusIcn.classList.toggle('fa-minus-square');
+// }

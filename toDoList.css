@@ -48,26 +48,24 @@ ul {
 
 #tdl div {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 #tdl li {
   display: flex;
   font-size: larger;
   padding: 0px 5px;
-  margin: 0px 5px;
+  margin: 10px;
   font-weight: bold;
   cursor: pointer;
-  justify-content: center;
   align-items: center;
 }
 
 #tdl i {
   display: flex;
   align-items: center;
-  margin: 0px 5px;
-  padding: 10px;
-  cursor: pointer;
+  padding: 0px 5px;
+  margin: 10px 0px;
 }
 
 .done {
